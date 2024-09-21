@@ -1,0 +1,14 @@
+# Load necessary library
+library(ggplot2)
+
+# Create the data frame
+financial_data <- data.frame(
+  Date = as.Date(c('2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05')),
+  StockPrice = c(100, 102, 98, 105, 108),
+  VolumeTraded = c(2.5, 3.0, 2.2, 2.8, 3.5),
+  MarketCap = c(500, 510, 490, 525, 540)
+)
+
+# Calculate correlation matrix
+cor_matrix <- cor(financial_data[, -1])
+print(cor_matrix)
